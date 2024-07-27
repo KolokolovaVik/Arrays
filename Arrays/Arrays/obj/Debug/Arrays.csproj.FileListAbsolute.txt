@@ -1,0 +1,7 @@
+C:\Users\VK264\source\repos\Arrays\Arrays\Arrays\bin\Debug\Arrays.exe.config
+C:\Users\VK264\source\repos\Arrays\Arrays\Arrays\bin\Debug\Arrays.exe
+C:\Users\VK264\source\repos\Arrays\Arrays\Arrays\bin\Debug\Arrays.pdb
+C:\Users\VK264\source\repos\Arrays\Arrays\Arrays\obj\Debug\Arrays.csproj.AssemblyReference.cache
+C:\Users\VK264\source\repos\Arrays\Arrays\Arrays\obj\Debug\Arrays.csproj.CoreCompileInputs.cache
+C:\Users\VK264\source\repos\Arrays\Arrays\Arrays\obj\Debug\Arrays.exe
+C:\Users\VK264\source\repos\Arrays\Arrays\Arrays\obj\Debug\Arrays.pdb
