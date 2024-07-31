@@ -8,6 +8,8 @@ namespace Arrays
         {
             int sumSecondLine = 0;
             int multiplicationFirstColumn = 1;
+            int line = 1;
+            int column = 0;
 
             int[,] array =
             {
@@ -22,12 +24,12 @@ namespace Arrays
             {
                 for (int j = 0; j < array.GetLength(1); j++)
                 {
-                    if (i == 1)
+                    if (i == line)
                     {
                         sumSecondLine += array[i, j];
                     }
 
-                    if (j == 0)
+                    if (j == column)
                     {
                         multiplicationFirstColumn *= array[i, j];
                     }
