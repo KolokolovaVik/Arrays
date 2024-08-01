@@ -6,8 +6,8 @@ namespace Arrays
     {
         static void Main(string[] args)
         {
-            int sumSecondLine = 0;
-            int multiplicationFirstColumn = 1;
+            int sumLine = 0;
+            int multiplicationColumn = 1;
             int line = 1;
             int column = 0;
 
@@ -19,29 +19,27 @@ namespace Arrays
             };
 
             Console.WriteLine("Двумерный массив:\n");
-
             for (int i = 0; i < array.GetLength(0); i++)
             {
                 for (int j = 0; j < array.GetLength(1); j++)
                 {
-                    if (i == line)
-                    {
-                        sumSecondLine += array[i, j];
-                    }
-
-                    if (j == column)
-                    {
-                        multiplicationFirstColumn *= array[i, j];
-                    }
-
                     Console.Write(array[i, j]);
                 }
-
                 Console.WriteLine();
             }
 
-            Console.WriteLine("Сумма второй строки: " + sumSecondLine);
-            Console.WriteLine("Произведение первого столбца: " + multiplicationFirstColumn);
+            for (int i = column; i < array.GetLength(1); i++)
+            {
+                sumLine += array[line, i];
+            }
+
+            for (int j = column; j < array.GetLength(0); j++)
+            {
+                multiplicationColumn *= array[j, column];
+            }
+
+            Console.WriteLine($"\nСумма {line + 1} строки: " + sumLine);
+            Console.WriteLine($"Произведение {column + 1}  столбца: " + multiplicationColumn);
         }
     }
 }
