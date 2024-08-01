@@ -6,10 +6,10 @@ namespace Arrays
     {
         static void Main(string[] args)
         {
-            int sumLine = 0;
-            int multiplicationColumn = 1;
-            int line = 1;
-            int column = 0;
+            int sum = 0;
+            int multiplication = 1;
+            int lineIndex = 1;
+            int columnIndex = 0;
 
             int[,] array =
             {
@@ -17,8 +17,8 @@ namespace Arrays
                 {4,6,7,1,2},
                 {5,7,9,2,3},
             };
-
             Console.WriteLine("Двумерный массив:\n");
+
             for (int i = 0; i < array.GetLength(0); i++)
             {
                 for (int j = 0; j < array.GetLength(1); j++)
@@ -28,18 +28,18 @@ namespace Arrays
                 Console.WriteLine();
             }
 
-            for (int i = column; i < array.GetLength(1); i++)
+            for (int i = columnIndex; i < array.GetLength(1); i++)
             {
-                sumLine += array[line, i];
+                sum += array[lineIndex, i];
             }
 
-            for (int j = column; j < array.GetLength(0); j++)
+            for (int j = columnIndex; j < array.GetLength(0); j++)
             {
-                multiplicationColumn *= array[j, column];
+                multiplication *= array[j, columnIndex];
             }
 
-            Console.WriteLine($"\nСумма {line + 1} строки: " + sumLine);
-            Console.WriteLine($"Произведение {column + 1}  столбца: " + multiplicationColumn);
+            Console.WriteLine($"\nСумма {lineIndex + 1} строки: " + sum);
+            Console.WriteLine($"Произведение {columnIndex + 1}  столбца: " + multiplication);
         }
     }
 }
