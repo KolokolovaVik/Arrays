@@ -1,52 +1,52 @@
-﻿//using System;
+﻿using System;
 
-//namespace Arrays
-//{
-//    internal class Homework33
-//    {
-//        static void Main(string[] args)
-//        {
-//            Random random = new Random();
-//            int[] array = new int[6];
-//            int localMax = int.MinValue;
+namespace Arrays
+{
+    internal class Homework33
+    {
+        static void Main(string[] args)
+        {
+            Random random = new Random();
 
-//            for (int i = 0; i < array.Length; i++)
-//            {
-//                array[i] = random.Next(100);
-//                Console.Write(array[i] + "|");
-//            }
+            int sizeArray = 30;
+            int randomNumber = 100;
 
-//            for (int i = array.Length - 1; i >= 0; i--)
-//            {
-//                if (array[i] == array[array.Length - 1])
-//                {
-//                    if (array[i] > array[i - 1])
-//                    {
-//                        localMax = array[i];
-//                        Console.WriteLine("\n\nЛокальный максимум: " + localMax);
-//                    }
-//                }
+            int[] numbers = new int[sizeArray];
 
-//                if (array[i] != array[array.Length - 1] && array[i] != array[0])
-//                {
-//                    if (array[i] > array[i - 1] && array[i] > array[i +1])
-//                    {
-//                        localMax = array[i];
-//                        Console.WriteLine("\nЛокальный максимум: " + localMax);
-//                    }   
-//                }
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                numbers[i] = random.Next(randomNumber);
+                Console.Write(numbers[i] + "|");
+            }
 
-//                if (array[i] == array[0])
-//                {
-//                    if (array[i] > array[i + 1])
-//                    {
-//                        localMax = array[i];
-//                        Console.WriteLine("\nлокальный максимум: " + localMax);
-//                    }
-//                }
-//            }
-//        }
-//    }
-//}
+            for (int i = numbers.Length - 1; i >= 0; i--)
+            {
+                if (numbers[i] == numbers[numbers.Length - 1])
+                {
+                    if (numbers[i] > numbers[i - 1])
+                    {
+                        Console.WriteLine("\nЛокальный максимум: " + numbers[i]);
+                    }
+                }
+
+                if (numbers[i] != numbers[numbers.Length - 1] && numbers[i] != numbers[0])
+                {
+                    if (numbers[i] > numbers[i - 1] && numbers[i] > numbers[i + 1])
+                    {
+                        Console.WriteLine("\nЛокальный максимум: " + numbers[i]);
+                    }
+                }
+
+                if (numbers[i] == numbers[0])
+                {
+                    if (numbers[i] > numbers[i + 1])
+                    {
+                        Console.WriteLine("\nлокальный максимум: " + numbers[i]);
+                    }
+                }
+            }
+        }
+    }
+}
 
 
