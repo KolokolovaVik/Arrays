@@ -9,7 +9,7 @@ namespace Arrays
             const string CommandSum = "Sum";
             const string CommandExit = "Exit";
 
-            int[] numbers = new int[1];
+            int[] numbers = new int[0];
 
             bool isWork = true;
 
@@ -18,21 +18,10 @@ namespace Arrays
                 Console.SetCursorPosition(0, 0);
                 Console.Write("Пользователь ввёл числа: ");
 
-                for (int i = 0; i < numbers.Length - 1; i++)
+                for (int i = 0; i < numbers.Length; i++)
                 {
                     Console.Write(numbers[i] + "|");
                 }
-
-                int[] tempNumbrs = new int[numbers.Length + 1];
-
-                for (int i = 0; i < numbers.Length; i++)
-                {
-                    tempNumbrs[i] = numbers[i];
-                }
-
-                Console.WriteLine("\nВведите число: ");
-                tempNumbrs[numbers.Length - 1] = Convert.ToInt32(Console.ReadLine());
-                numbers = tempNumbrs;
 
                 Console.SetCursorPosition(0, 5);
                 Console.WriteLine($"Введите команду:\n{CommandSum} - для вывода суммы введённых чисел. " +
@@ -43,24 +32,34 @@ namespace Arrays
                 {
                     case CommandSum:
                         int sum = 0;
+
                         for (int i = 0; i < numbers.Length; i++)
                         {
                             sum += numbers[i];
                         }
+
                         Console.WriteLine($"\nСумма всех чисел: {sum}");
                         break;
 
                     case CommandExit:
                         isWork = false;
-                        Console.WriteLine("Команда завершена.");
+                        Console.WriteLine("Программа завершена.");
                         break;
 
                     default:
-                        Console.WriteLine("Такой команды нет");
-                        break;
+                        int[] tempNumbrs = new int[numbers.Length + 1];
 
+                        for (int i = 0; i < numbers.Length; i++)
+                        {
+                            tempNumbrs[i] = numbers[i];
+                        }
+
+                        tempNumbrs[tempNumbrs.Length - 1] = Convert.ToInt32(userInput);
+                        numbers = tempNumbrs;
+                        break;
                 }
 
+                Console.WriteLine("Нажмите любую клавишу.");
                 Console.ReadKey();
                 Console.Clear();
             }
