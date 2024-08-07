@@ -47,6 +47,8 @@
     <Compile Include="Homework32.cs" />
     <Compile Include="Homework33.cs" />
     <Compile Include="Homework34.cs" />
+    <Compile Include="Homework35.cs" />
+    <Compile Include="Homework36.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
