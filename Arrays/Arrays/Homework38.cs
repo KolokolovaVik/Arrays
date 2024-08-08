@@ -6,16 +6,19 @@ namespace Arrays
     {
         static void Main(string[] args)
         {
-            int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            int[] numbers = { 1, 2, 3, 4, 5 };
 
             Console.WriteLine("Насколько элементов вы хотите сдвинуть массив влево?");
             int shift = Convert.ToInt32(Console.ReadLine());
 
-            for (int j = 0; j < numbers.Length - shift; j++)
+            for (int i = 0; i < shift; i++)
             {
-                int tempVariable = numbers[j];
-                numbers[j] = numbers[j + shift];
-                numbers[j + shift] = tempVariable;
+                for (int j = 0; j < numbers.Length - 1; j++)
+                {
+                    int temp = numbers[j + 1];
+                    numbers[j + 1] = numbers[j];
+                    numbers[j] = temp;
+                }
             }
 
             Console.WriteLine($"Массив со сдвигом влево на: {shift}.");
